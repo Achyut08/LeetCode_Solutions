@@ -15,5 +15,4 @@ In this repository, we upload the questions that we solve on leetcode every day,
  - **Graph**
  - **Heap**
  - **Tries**
- 
-**Note**: *I'm working on it, and certain topics have been left off. I'll look through them as time goes, and after 4-5 months, all of the content will be available...*
+
