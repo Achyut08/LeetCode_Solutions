@@ -15,7 +15,7 @@ class Solution:
             dp[i] = max(dp[i-2]+nums[i], dp[i-1])
         print(dp)
         
-        return max(dp)
+        return max(dp[-1],dp[-2])
         # rob1 = 0
         # rob2 = 0
         # for i in nums:
