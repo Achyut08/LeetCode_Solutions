@@ -16,7 +16,7 @@ class Solution:
                 dp[i] = max(dp[i-2]+nums[i], dp[i-1])
         
             return max(dp[-1],dp[-2])
-        if len(nums) < 2 :
+        if len(nums) == 1 :
             return nums[0]
         return max(rob(nums[1:]),rob(nums[:-1]))
 #             def house_robber(nums):
