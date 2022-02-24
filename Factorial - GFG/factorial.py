@@ -3,12 +3,16 @@
 
 class Solution:
     def factorial (self, n):
+        dp = [-1]*(n+1)
+        if dp[n] != -1:
+            return dp[n]
         if n == 0:
-            return 1
+            dp[0] = 1
         elif n == 1:
-            return 1
+            dp[1] = 1
         else:
-            return n*self.factorial(n-1)
+            dp[n] =  n*self.factorial(n-1)
+        return dp[n]
         # code here
 
 #{ 
