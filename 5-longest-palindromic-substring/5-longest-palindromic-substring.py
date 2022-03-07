@@ -1,6 +1,6 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-       
+        
         n = len(s)
         # Form a bottom-up dp 2d array
         # dp[i][j] will be 'true' if the string from index i to j is a palindrome. 
