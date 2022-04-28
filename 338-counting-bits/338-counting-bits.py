@@ -5,8 +5,8 @@ class Solution:
             count=0
             n=i
             while(n):
-                count += 1
                 n=n&(n-1)
+                count += 1
             counter.append(count)
         return counter
             
