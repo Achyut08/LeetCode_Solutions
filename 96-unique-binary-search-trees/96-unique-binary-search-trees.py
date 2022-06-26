@@ -1,24 +1,12 @@
 class Solution:
-    #catalan number
     def numTrees(self, n: int) -> int:
-        catalan = []
-        catalan.append(1)
-        for i in range(1,10001):
-            x = catalan[i-1]*(4*i-2)/(i+1)
-            catalan.append(x)
-        return int(catalan[n])
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        if n < 2:
+            return 1
+        sol = [0]*(n+1)
+        sol[0] = 1
+        sol[1] = 1
+        for i in range(2,n+1):
+            for j in range(0,i):
+                sol[i] += sol[j]*sol[i-j-1]
+        return sol[n]
         
