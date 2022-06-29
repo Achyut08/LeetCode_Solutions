@@ -9,14 +9,12 @@ class Solution:
             return l2
         if l2 == None:
             return l1
-        
         head = l1
         if l1.val > l2.val:
             head = l2
             l2 = l2.next
         else:
             l1 = l1.next
-        
         curr = head
         while l1 != None and l2 != None:
             if l1.val < l2.val:
@@ -26,10 +24,8 @@ class Solution:
                 curr.next = l2
                 l2 = l2.next
             curr = curr.next
-        
         if l1 == None:
             curr.next = l2
         else:
             curr.next = l1
-        
         return head
