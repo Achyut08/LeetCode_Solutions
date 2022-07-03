@@ -3,12 +3,15 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        i = 1
-        j = n
-        while (i < j):
-            pivot = (i+j) // 2
-            if (isBadVersion(pivot)):
-                j = pivot       # keep track of the leftmost bad version
+        low = 1
+        high = n
+        result = n
+        while (low <= high):
+            mid = (low + high) // 2
+            if isBadVersion(mid):
+                result = mid
+                high = mid-1
             else:
-                i = pivot + 1   # the one after the rightmost good version
-        return i
+                low = mid + 1
+        return result
+        
