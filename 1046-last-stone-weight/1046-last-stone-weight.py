@@ -1,5 +1,3 @@
-import heapq 
-
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         stones = [-x for x in stones]
