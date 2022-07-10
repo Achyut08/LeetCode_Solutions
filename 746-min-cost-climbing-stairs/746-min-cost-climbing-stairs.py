@@ -4,3 +4,4 @@ class Solution:
             cost[i] += min(cost[i-2],cost[i-1])
         print(cost)
         return min(cost[-1],cost[-2])
+    
