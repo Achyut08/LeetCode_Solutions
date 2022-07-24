@@ -1,7 +1,9 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        ans = float(-inf)
+        ans = 0
         cprod = 1
+        if len(nums) == 1:
+            return nums[0]
         for i in range(len(nums)):
             cprod *= nums[i]
             ans = max(ans,cprod)
