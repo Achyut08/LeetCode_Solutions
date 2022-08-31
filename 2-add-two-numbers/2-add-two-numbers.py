@@ -18,6 +18,3 @@ class Solution:
             curr = curr.next
             carry //= 10
         return dummy.next
-        
-        
-        
